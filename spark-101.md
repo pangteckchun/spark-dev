@@ -10,7 +10,17 @@ You tell what transformation and analysis you want to do in a script and Spark w
 
 1. 100x faster than Hadoop MapReduce using DAG (direct acyclic graph) techniques. Spark is memory based hence it is also faster.
 
-Architecture overview:  
+
+### Components of Spark:  
+![Spark Components](./img/spark-components-overview-1.png)  
+![Spark Components](./img/spark-components-overview-2.png)  
+1. `spark-shell` is the REPL interactive environment for trying out Spark programs and logic.  
+![Spark Components](./img/spark-shell-intro.png)  
+
+1. `Spark Context` is the entry point to Spark APIs and every Spark application requires a Spark Context.
+
+
+### Architecture overview:  
 ![Spark Architecture](./img/spark-architecture.png)
 
 ---
