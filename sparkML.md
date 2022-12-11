@@ -2,7 +2,7 @@
 Leveraging distributed nature of Spark to massive data machine learning problems.
 
 ### Spark's MLLib ###
-1. Some algos supported by MLLib are:  
+1. MLLib is Spark's scalable machine learning library consisting of common learning algos, utilities and optimization primitives. Some algos supported by MLLib are:  
 - Feature extraction - TF-IDF (Term Frequency / Inverse Document Frequency) --> for searches
 - Basic statistics - chi-squared test, peasrson
 - Linear regression, logistics regression

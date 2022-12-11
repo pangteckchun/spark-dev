@@ -1,17 +1,24 @@
 ## DataFrame intro ##
-1. Extended from RDD object and for working with structured data.
+1. Extended from RDD object and for working with **structured** data.
 
-2. DataFrame behaves like a typical database with:
+1. DataFrame behaves like a typical database with:
 - Row objects
 - Runs SQL queries
 - Has a schema
 - Read/write to JSON, Hive and parquet
 - Comunicates via JDBC/ODBC, Tableau
 
+3. DataFrame represents a distributed collection of data where the data are organised into columns (we named)
+
+4. DataFrames can be created using the following methods:  
+![Spark Components](./img/spark-dataframes-creation.png)
+
 ## DataSets intro ##
 1. DataSets differ from DataFrame primarily it can define the entity types for each row and can be checked at compile time, versus DataFrame schemea which is inferred a runtime; better optimization for DataSets.
 
 1. RDD can be converted to DataSets with `to.DS()`; you can convert from a DataSet to RDD using `rdd()` function and you can perform more low level operations using RDD functions.
+
+1. If you are dealing with unstructured data, e.g. media streams or streams of text, you will still need to use RDD.
 
 1. DataSets are the new hotness:
 - More efficent for SQL queries and serialization
@@ -23,6 +30,9 @@
 
 ## Spark SQL intro ##
 1. A Spark module for structued data processing and provides DataFrames as an abstraction for interacting with it.
+
+1. Spark SQL provides these capabilities:  
+![Spark Components](./img/spark-sql-capabilities.png)
 
 1. Brings SQL support to Spark ecosystem; Spark SQL conveniently blurs the lines between RDDs and relational tables. Unifying these powerful abstractions makes it easy for developers to intermix SQL commands querying external data with complex analytics.
 
@@ -37,7 +47,7 @@
 
 ## Working with DataSets ##
 1. There are 2 ways of working with DataSets:
-- One using `spark.sql ("REGULAR SQL STATEMENT")`
+- One using `spark.sql ("REGULAR SQL STATEMENT")` leveraging `SQLContext` object offered in Spark SQL
 - One using functions provided by DataSets schema object such as `select()`, `filter()`, `groupBy()`
 
 2. Choice depends on personal preference and familiarity with native SQLs and granularity of data manipulations desired.
